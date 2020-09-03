@@ -1,0 +1,197 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    <link rel="stylesheet" href="/newDesign.css">
+</head>
+<style>
+    :root {
+    --selection-background: green;
+}
+#box::after {
+    border-width: 8px;
+    border-left-color:var(--selection-background);
+    border-top-color:var(--selection-background);
+    margin-left: -1;
+    margin-top: -1;
+
+   
+}
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="form">
+                    <h1>Design Visualizer</h1>
+                    <div class="form-container">
+                        
+                        <label></label><br>
+                        <div class="row">
+                            <button class="col-3 option active" id="status1" > <i class="fa fa-check " id="tick"></i>Account</button>
+                            <button class="col-3 option" id="status2" ><i class="fa fa-check " id="tick"></i>Buying Center OR Offering</button>
+                            <button class="col-3 option" id="status3" ><i class="fa fa-check" id="tick"></i>Cell </button>
+                        </div>
+                        <br>
+                    <label>Status</label><br>
+                    <div class="row" style="width: 80%;
+                    margin-left: 2;">
+                        <button class="col-3 btn-group red" onclick="colorSelector('red')"> <i class="fa fa-check " id="red-tick"></i>Red</button>
+                        <button class="col-3 btn-group amber" onclick="colorSelector('#FFBF00')"><i class="fa fa-check " id="#FFBF00-tick"></i>Amber</button>
+                        <button class="col-3 btn-group green" onclick="colorSelector('green')"><i class="fa fa-check" id="green-tick"></i>Green</button>
+                    </div>
+                    
+                    <div class="row" style="margin-top: 3%;">
+                        <div class="col-6">
+                    <label>Competitor</label><br>
+                    
+                    <input type="radio" style="width: fit-content;" name="star" id="starYes" value="yes">
+                    <label for="starYes">Yes</label>
+                    <input type="radio" style="width: fit-content; margin-left: 10%;" name="star" id="star" value="no">
+                    <label for="star">No</label><br>
+                </div>
+                <div class="col-6">
+                    <label>Strategy</label><br>
+                    <input type="radio" style="width: fit-content;" name="bulb" id="bulbYes" value="yes">
+                    <label for="bulbYes">Yes</label>
+                    <input type="radio" style="width: fit-content; margin-left: 10%;" name="bulb" id="bulb" value="no">
+                    <label for="bulb">No</label><br>
+                </div>
+            </div>
+                    <div class="row" style="margin-top: 3%;">
+                        <div class="col-6">
+                    <label>PIPELINE</label><br>
+                    <input type="text" id="pipeline" placeholder="Enter Pipeline"><br>
+                </div>
+                <div class="col-6">
+                    <label>WINS</label><br>
+                    <input type="text" id="wins" placeholder="Enter Wins"><br>
+                </div>
+            </div>
+                <div class="row" style="margin-top: 3%;">
+                    <div class="col-6">
+                    <label>LOSSES</label><br>
+                    <input type="text" id="losses" placeholder="Enter losses"><br>
+                </div>
+                <div class="col-6">
+                    <label >Target</label><br>
+                    <input type="text" id="target" placeholder="Enter Target"><br>
+                </div>
+                </div> 
+                    <label style="margin-top: 3%;">Task</label><br>
+                    <input style="width: 43%;" type="text" id="task" placeholder="Enter Task"><br>
+                
+                    <label>Space</label><br>
+                    <input type="radio" style="width: fit-content;" name="space" id="space1" value="yes">
+                    <label for="space1">WHITESPACE</label>
+                    <input type="radio" style="width: fit-content; margin-left: 10%;" name="space" id="space2"
+                        value="no">
+                    <label for="space2">BLACKSPACE</label>
+                    <input type="radio" style="width: fit-content; margin-left: 10%;" name="space" id="space3"
+                        value="no">
+                    <label for="space3">NONE</label><br>
+                </div>
+
+            </div>
+            </div>
+
+            <div class="col-6 card" >
+                <div class="row card-selector">
+                    <label for="cars">Choose a Template:</label>
+                    <select name="template" id="template">
+                      <option value="template1">Template 1</option>
+                      <option value="template2">Template 2</option>
+                      <option value="template3">Template 3</option>
+                      <option value="template4">Template 4</option>
+                    </select>
+                </div>
+                <div class="row card-container" id="box" style="margin-top: 15%; margin-left: 20%;">
+                    <div class="col-12">
+                        <div class="row ">
+                            <div class="col-1">
+                                <img id="competitorImg" class="img" src="/images/star/Group 231@3x.png">
+                            </div>
+                            <div class="col-8">
+                                <h2 id="spaceTitle">WHITESPACE</h2>
+                            </div>
+                            <div class="col-1">
+                                <img id="strategyImg" class="img" src="images/bulb/Group 236@3x.png">
+                            </div>
+                        </div>
+                        <div class="row space1">
+                            <div class="col-7">
+                                <div class="row">
+                                    <h3 id="pipelineValue">PIPELINE | $800k</h3>
+                                </div>
+                                <div id="pipelineBar" class="row pipeline">
+
+                                </div>
+                            </div>
+                            <div class="col-5" style="text-align: center;">
+                                <img id="bullEye" class="bull" src="images/bull-eye/Group 222@3x.png">
+                            </div>
+                        </div>
+                        <div class="row space1">
+                            <div class="col-7">
+                                <div class="row">
+                                    <h3 id="winsValue">WINS | $600k</h3>
+                                </div>
+                                <div id="winsBar" class="row wins">
+
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <h2 id="targetValue">$400K</h2>
+                            </div>
+                        </div>
+                        <div class="row space1">
+                            <div class="col-7">
+                                <div class="row">
+                                    <h3 id="lossesValue">LOSSES | $200k</h3>
+                                </div>
+                                <div id="lossesBar" class="row losses1">
+
+                                </div>
+                            </div>
+                            <div class="col-5 last">
+
+                                <div class="row last" style="width: 100%; margin: 0;">
+                                    <div class="col-3 last">
+                                        <img id="percentageImg" class="img" src="images/indicator/Group@3x.png">
+                                    </div>
+                                    <div class="col-3 last">
+                                        <h3 id="percentage">150%</h3>
+                                    </div>
+                                    <div class="col-3 last">
+                                        <img id="taskImg" style="text-align: end;" class="img"
+                                            src="images/task/Group 230@3x.png" alt="">
+                                    </div>
+                                    <div class="col-3 padd last">
+                                        <h3 style="margin-left: -5;" id="taskValue">05</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="newDesign.js"></script>
+</body>
+
+</html>

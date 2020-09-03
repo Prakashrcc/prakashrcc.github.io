@@ -1,0 +1,144 @@
+h1{
+    text-align: center;
+}
+.card-container{
+    padding: .5%;
+    border-radius: 10px;
+    border: 2px solid green;
+    width: 200px;
+    height: 100px;
+    border-radius: 4px;
+    border: solid 1px #43a560;
+    background-color: #d8ffe3;
+}
+.star-container{
+    margin: 0;
+    padding: 0;
+}
+.star-container img{
+    width: 13.5px;
+    height: 15px;
+    object-fit: contain;
+}
+.pipeline-container h3, .pipeline-contents h3, .wins-contents h3 , .losses-contents h3{
+    width: 63px;
+    height: 9px;
+    font-family: Roboto;
+    font-size: 8px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+h3{
+    font-size: 18px;
+}
+.pipeline-contents{
+    margin: 0;
+    padding: 0;
+}
+.pipeline-contents{
+    padding-left: 4%;
+    margin-top: 12%;
+    border-left: 1px solid #808080b3;
+}
+.pipeline{
+    
+    height: 7px;
+    border-radius: 10px;
+    margin-left: -2%;
+    width: 100px;
+    height: 4px;
+    object-fit: contain;
+    border-radius: 1px;
+    background-color: #57719d;
+}
+.col-4{
+    padding-right: 0;
+}
+.win-contents{
+    padding: 0;
+}
+.win-contents h3{
+    padding-left: 4%;
+    border-left: 1px solid gray;
+}
+.wins{
+    background: green;
+    height: 7px;
+    border-radius: 10px;
+    margin-left: -2%;
+    width: 75%;
+    width: 70px;
+    height: 4px;
+    object-fit: contain;
+    border-radius: 1px;
+    background-color: #438566;
+}
+.col-8{
+    padding: 0;
+}
+.losses-contents{
+    border-left: 1px solid gray;
+    padding-left: 4%;
+}
+.losses{
+    background: red;
+    height: 7px;
+    border-radius: 10px;
+    margin-left: -2%;
+    width: 25%;
+    width: 30px;
+    height: 4px;
+    object-fit: contain;
+    border-radius: 1px;
+    background-color: #ff4e4e;
+}
+.bulb-container{
+    text-align: end;
+    padding-right: 1%;
+}
+.bulb-container img{
+    width: 25px;
+}
+.bull-eye-container{
+    text-align: center;
+    margin-top: 10%;
+}
+.bull-eye-container img{
+    width: 50px;
+}
+.profit-container{
+    margin-top: 4%;
+    text-align: center;
+}
+.profit-container h2{
+    font-weight: bolder;
+}
+.indicator-container{
+    text-align: center;
+}
+.indicator-container img{
+    width: 30px;
+}
+.percent{
+    font-size: 25px;
+    font-weight: bold;
+}
+.task-container{
+    text-align: end;
+    margin-left: -10%;
+}
+.task-container img{
+    width: 23px;
+}
+.task-value{
+    font-size: 25px;
+    padding-left: 10%;
+}
+.wins-row{
+    margin-top: 10%;
+    height: 13px;
+}
