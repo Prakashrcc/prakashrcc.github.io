@@ -31,6 +31,9 @@ var space1=document.getElementById("space1");
 var space2=document.getElementById("space2");
 var space3= document.getElementById("space3");
 var spaceTitle=document.getElementById("spaceTitle");
+var winContainer = document.getElementById("winContainer");
+var lossesContainer = document.getElementById("lossesContainer");
+var pipelineContainer=document.getElementById("pipelineContainer");
 var colorStatus;
 var statusValue=status1;
 
@@ -48,13 +51,17 @@ inputPipeline.onkeyup= function(){
     
     if(inputPipeline.value == '0' || inputPipeline.value < '1'){
         
-        pipelineValue.innerHTML='NO PIPELINE';
+        //pipelineValue.innerHTML='NO PIPELINE';
+        pipelineValue.innerHTML='-';
+        pipelineContainer.style.textAlign='center';
         pipelineValue.style.opacity='90%';
         pipelineBar.style.opacity='25%';
     }
     else{
-        pipelineBar.style.opacity='125%';
-        pipelineValue.innerHTML='PIPELINE | $'+ intToString( inputPipeline.value, 2);
+        //pipelineBar.style.opacity='125%';
+        //pipelineValue.innerHTML='PIPELINE | $'+ intToString( inputPipeline.value, 2);
+        pipelineContainer.style.textAlign='start';
+        pipelineValue.innerHTML='$'+ intToString( inputPipeline.value, 2);
     }
 }
 
@@ -63,7 +70,9 @@ inputWins.onkeyup= function(){
     
     if( inputWins.value < 1){
         
-        winsValue.innerHTML='NO WINS';
+        //  winsValue.innerHTML='NO WINS';
+        winsValue.innerHTML='-';
+        winContainer.style.textAlign= 'center';
         winsValue.style.opacity='90%';
         winsBar.style.opacity='25%';
         winsBar.style.width='100%';
@@ -71,8 +80,10 @@ inputWins.onkeyup= function(){
         percentageImg.style.opacity='25%';
     }
     else{
-        winsBar.style.opacity='125%';
-        winsValue.innerHTML='WINS | $'+ intToString(inputWins.value,2);
+        //winsBar.style.opacity='125%';
+        //winsValue.innerHTML='WINS | $'+ intToString(inputWins.value,2);
+        winsValue.innerHTML='$'+ intToString(inputWins.value,2);
+        winContainer.style.textAlign= 'start';
         var percent= ( inputWins.value / inputPipeline.value ) * 100;
         winsBar.style.width=percent+'%';
         winsBar.style.maxWidth='100%';
@@ -94,14 +105,19 @@ inputLosses.onkeyup= function(){
     
     if( inputLosses.value < 1){
         
-        lossesValue.innerHTML='NO LOSSES';
+       // lossesValue.innerHTML='NO LOSSES';
+       lossesValue.innerHTML='-';
+       lossesContainer.style.textAlign="center";
         lossesValue.style.opacity='90%';
         lossesBar.style.opacity='25%';
         lossesBar.style.width='100%';
     }
     else{
-        lossesBar.style.opacity='125%';
-        lossesValue.innerHTML='LOSSES | $'+ intToString(inputLosses.value,2);
+        //lossesBar.style.opacity='125%';
+        //lossesValue.innerHTML='LOSSES | $'+ intToString(inputLosses.value,2);
+        lossesValue.innerHTML='$'+ intToString(inputLosses.value,2);
+        lossesContainer.style.textAlign="start";
+        
         var percent= ( inputLosses.value / inputPipeline.value ) * 100;
         lossesBar.style.width=percent+'%';
         lossesBar.style.maxWidth='100%';
@@ -112,7 +128,8 @@ inputLosses.onkeyup= function(){
 inputTarget.onkeyup=function(){
     
     if(inputTarget.value < 1){
-        targetValue.style.opacity='0%';
+        //targetValue.style.opacity='0%';
+        targetValue.innerHTML="-";
         bullEye.style.opacity='25%';
         percentage.style.opacity='0';
         percentageImg.style.opacity='25%';
@@ -124,7 +141,7 @@ inputTarget.onkeyup=function(){
 
         percentage.style.opacity='100%';
         if(inputWins.value >0){
-        percentage.innerHTML= ((inputWins.value / inputTarget.value) * 100)+"%";
+        percentage.innerHTML= ((inputWins.value / inputTarget.value) * 100).toFixed(2)+"%";
         percentageImg.style.opacity='100%';
         }
         else{
@@ -139,11 +156,11 @@ inputTarget.onkeyup=function(){
 inputTask.onkeyup=function(){
     
     if(inputTask.value < 1){
-        taskValue.style.opacity='0%';
+       // taskValue.style.opacity='0%';
         taskImg.style.opacity='25%';
     }
     else{
-        taskValue.style.opacity='100%';
+       // taskValue.style.opacity='100%';
         taskImg.style.opacity='100%';
         taskValue.innerHTML= intToString(inputTask.value,2); 
         if(taskValue.innerHTML <10){
@@ -156,11 +173,11 @@ inputTask.onkeyup=function(){
 inputTask.onkeyup=function(){
     
     if(inputTask.value < 1){
-        taskValue.style.opacity='0%';
+       // taskValue.style.opacity='0%';
         taskImg.style.opacity='25%';
     }
     else{
-        taskValue.style.opacity='100%';
+       // taskValue.style.opacity='100%';
         taskImg.style.opacity='100%';
         taskValue.innerHTML= intToString(inputTask.value,2); 
         if(taskValue.innerHTML <10){
@@ -234,12 +251,14 @@ space1.onclick=function(){
     spaceTitle.innerHTML="WHITESPACE";
     spaceTitle.style.color="black";
     spaceTitle.style.background="transparent";
+    spaceTitle.style.border="solid 0.5px #000000";
     
 }
 space2.onclick=function(){
     spaceTitle.innerHTML="BLACKSPACE";
     spaceTitle.style.color="white";
     spaceTitle.style.background="black";
+    spaceTitle.style.border="solid 0.5px #000000";
    
 
    
@@ -247,6 +266,7 @@ space2.onclick=function(){
 space3.onclick=function(){
     spaceTitle.style.color="transparent";
     spaceTitle.style.background="transparent";
+    spaceTitle.style.border="none";
     
 }
 

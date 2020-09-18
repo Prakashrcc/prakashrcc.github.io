@@ -247,3 +247,117 @@ select{
     border-bottom: 1px solid #8080806b;
     margin-left: 5%;
 }
+
+.secondTemplate{
+    width: 156px;
+  height: 94px;
+  border-radius: 4px;
+  border: solid 1px green;
+  background-color: #ffffff;
+    zoom: 2;
+    margin-top: 15%;
+    margin-left: 28%;
+}
+.element{
+    padding:0;
+    text-align: center;
+    
+}
+.secondTitle{
+    width: 64px;
+    height: 9px;
+    font-family: SFUIText;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    
+    letter-spacing: normal;
+    color: #000000;
+    width: 70px;
+  height: 15px;
+  border-radius: 2px;
+  border: solid 0.5px #000000;
+  background-color: #ffffff;
+  margin-top: 8px;
+
+}
+.secondImg{
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+.imgContainer{
+    border:0.5px solid #f3f3f3;
+    height:30.5px;
+    text-align: center;
+    padding-top: 5%;
+}
+.secondTotal{
+    width: 60px;
+    height: 19px;
+    font-family: SFUIText;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+    margin-top: 5;
+}
+.secondBull{
+    width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.secondPercent{
+    width: 15px;
+  height: 9px;
+  font-family: Roboto;
+  font-size: 8px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+    margin-top: 12;
+    display: grid;
+}
+.p{
+    text-align: start;
+    padding-left: 2%;
+}
+.i{
+    text-align: end;
+}
+.secondLiner{
+    text-align: start;
+    padding-left: 6%;
+}
+.pipelineTitle{
+    
+    
+    font-family: Roboto;
+    font-size: 8px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.03;
+    letter-spacing: normal;
+    color: #6d7278;
+  
+}
+.pipelineAmount{
+    font-size: 10px;
+  font-weight: bold;
+  line-height: 1.03;
+  color: #000000;
+}
+.redColor{
+    color:#ff5757;
+}
+.greenColor{
+    color:#00bd77;
+}
