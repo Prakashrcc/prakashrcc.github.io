@@ -499,7 +499,7 @@ function intToString(count, withAbbr = false, decimals = 2) {
     if(withAbbr) {
         result += `${COUNT_ABBRS[i]}`; 
     }
-    
+    //alert(result);
     return result;
 }
 function hexToRGB(h) {
