@@ -175,6 +175,7 @@ inputWins.onkeyup= function(){
             var percent= ( inputWins.value / inputPipeline.value ) * 100;
             winsBar1.style.width=percent+'%';
             winsBar1.style.maxWidth='100%';
+            percentage1.style.opacity='100';
         
         
             removeAll();
