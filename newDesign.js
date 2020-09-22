@@ -26,6 +26,7 @@ var competitorImg= document.getElementById("competitorImg");
 var status1=document.getElementById("status1");
 var status2=document.getElementById("status2");
 var status3= document.getElementById("status3");
+var status4=document.getElementById("status4");
 var box=document.getElementById("box");
 var space1=document.getElementById("space1");
 var space2=document.getElementById("space2");
@@ -34,7 +35,10 @@ var spaceTitle=document.getElementById("spaceTitle");
 var winContainer = document.getElementById("winContainer");
 var lossesContainer = document.getElementById("lossesContainer");
 var pipelineContainer=document.getElementById("pipelineContainer");
-var colorStatus;
+var cube=document.getElementById("cube");
+var circle=document.getElementById("circle");
+var adjust=document.getElementById("adjust");
+var colorStatus="green";
 var statusValue=status1;
 
 
@@ -44,6 +48,9 @@ inputWins.value=600000;
 inputPipeline.value=800000;
 inputLosses.value=200000;
 inputTask.value=05;
+strategyYes.value="select";
+competitorYes.value="chosen";
+//strategyYes.value="chosen";
 
 
 // Pipeline
@@ -52,15 +59,17 @@ inputPipeline.onkeyup= function(){
     if(inputPipeline.value == '0' || inputPipeline.value < '1'){
         
         //pipelineValue.innerHTML='NO PIPELINE';
-        pipelineValue.innerHTML='-';
+        pipelineValue.innerHTML='&#8213';
+        pipelineValue.style.color='#a0a2a4';
         pipelineContainer.style.textAlign='center';
         pipelineValue.style.opacity='90%';
-        pipelineBar.style.opacity='25%';
+        pipelineBar.style.opacity='10%';
     }
     else{
         //pipelineBar.style.opacity='125%';
         //pipelineValue.innerHTML='PIPELINE | $'+ intToString( inputPipeline.value, 2);
         pipelineContainer.style.textAlign='start';
+        pipelineValue.style.color='black';
         pipelineValue.innerHTML='$'+ intToString( inputPipeline.value, 2);
     }
 }
@@ -71,11 +80,12 @@ inputWins.onkeyup= function(){
     if( inputWins.value < 1){
         
         //  winsValue.innerHTML='NO WINS';
-        winsValue.innerHTML='-';
+        winsValue.innerHTML='&#8213';
+        winsValue.style.color='#a0a2a4';
         winContainer.style.textAlign= 'center';
         winsValue.style.opacity='90%';
-        winsBar.style.opacity='25%';
-        winsBar.style.width='100%';
+        //winsBar.style.opacity='25%';
+        //winsBar.style.width='100%';
         percentage.style.opacity='0';
         percentageImg.style.opacity='25%';
     }
@@ -83,10 +93,11 @@ inputWins.onkeyup= function(){
         //winsBar.style.opacity='125%';
         //winsValue.innerHTML='WINS | $'+ intToString(inputWins.value,2);
         winsValue.innerHTML='$'+ intToString(inputWins.value,2);
+        winsValue.style.color='#00bd77';
         winContainer.style.textAlign= 'start';
         var percent= ( inputWins.value / inputPipeline.value ) * 100;
-        winsBar.style.width=percent+'%';
-        winsBar.style.maxWidth='100%';
+        //winsBar.style.width=percent+'%';
+        //winsBar.style.maxWidth='100%';
 
         if(inputTarget.value >0){
         percentage.style.opacity='100%';
@@ -95,7 +106,7 @@ inputWins.onkeyup= function(){
         }
         else{
             percentage.style.opacity='0';
-        percentageImg.style.opacity='25%';
+        percentageImg.style.opacity='10%';
         }
     }
 }
@@ -106,7 +117,8 @@ inputLosses.onkeyup= function(){
     if( inputLosses.value < 1){
         
        // lossesValue.innerHTML='NO LOSSES';
-       lossesValue.innerHTML='-';
+       lossesValue.innerHTML='&#8213';
+       lossesValue.style.color='#a0a2a4';
        lossesContainer.style.textAlign="center";
         lossesValue.style.opacity='90%';
         lossesBar.style.opacity='25%';
@@ -116,6 +128,7 @@ inputLosses.onkeyup= function(){
         //lossesBar.style.opacity='125%';
         //lossesValue.innerHTML='LOSSES | $'+ intToString(inputLosses.value,2);
         lossesValue.innerHTML='$'+ intToString(inputLosses.value,2);
+        lossesValue.style.color='#ff5757';
         lossesContainer.style.textAlign="start";
         
         var percent= ( inputLosses.value / inputPipeline.value ) * 100;
@@ -129,13 +142,16 @@ inputTarget.onkeyup=function(){
     
     if(inputTarget.value < 1){
         //targetValue.style.opacity='0%';
-        targetValue.innerHTML="-";
-        bullEye.style.opacity='25%';
+        targetValue.innerHTML="&#8213";
+        targetValue.style.color='#a0a2a4';
+        
+        bullEye.style.opacity='10%';
         percentage.style.opacity='0';
-        percentageImg.style.opacity='25%';
+        percentageImg.style.opacity='10%';
     }
     else{
         targetValue.style.opacity='100%';
+        targetValue.style.color='black';
         bullEye.style.opacity='100%';
         targetValue.innerHTML='$'+ intToString(inputTarget.value,2); 
 
@@ -146,7 +162,7 @@ inputTarget.onkeyup=function(){
         }
         else{
             percentage.style.opacity='0';
-            percentageImg.style.opacity='25%';  
+            percentageImg.style.opacity='10%';  
         }
 
     }
@@ -157,7 +173,7 @@ inputTask.onkeyup=function(){
     
     if(inputTask.value < 1){
        // taskValue.style.opacity='0%';
-        taskImg.style.opacity='25%';
+        taskImg.style.opacity='10%';
     }
     else{
        // taskValue.style.opacity='100%';
@@ -174,7 +190,7 @@ inputTask.onkeyup=function(){
     
     if(inputTask.value < 1){
        // taskValue.style.opacity='0%';
-        taskImg.style.opacity='25%';
+        taskImg.style.opacity='10%';
     }
     else{
        // taskValue.style.opacity='100%';
@@ -193,13 +209,13 @@ strategyYes.onclick=function(){
         strategyImg.style.opacity="100%";
     }
     else{
-        strategyImg.style.opacity="25%";
+        strategyImg.style.opacity="10%";
     }
 }
 strategyNo.onclick=function(){
     
     if(strategyNo.checked == true){
-        strategyImg.style.opacity="25%";
+        strategyImg.style.opacity="10%";
     }
     else{
         strategyImg.style.opacity="100%";
@@ -212,7 +228,7 @@ competitorYes.onclick=function(){
     }
 competitorNo.onclick=function(){
     
-     competitorImg.style.opacity="25%";
+     competitorImg.style.opacity="10%";
     
 }
 
@@ -220,9 +236,14 @@ competitorNo.onclick=function(){
 status1.onclick=function(){
     box.style.border=" 1px solid "+colorStatus;
     box.style.background="#d8ffe3";
+    cube.style.display="none";
+    circle.style.display="none";
+    adjust.style.display="none";
+
     status1.className="col-3 option  active";
     status2.className="col-3 option";
     status3.className="col-3 option ";
+    status4.className="col-3 option ";
     statusValue=status1;
     
     document.documentElement.style.setProperty("--selection-background", colorStatus);
@@ -230,20 +251,48 @@ status1.onclick=function(){
 status2.onclick=function(){
     box.style.border=" 1px solid "+colorStatus;
     box.style.background="white";
+    cube.style.display="inline-block";
+    cube.style.color=colorStatus;
+    circle.style.display="none";
+    circle.style.color=colorStatus;
+    adjust.style.display="none";
     status1.className="col-3 option";
     status2.className="col-3 option active";
     status3.className="col-3 option ";
+    status4.className="col-3 option ";
     statusValue=status2;
-    document.documentElement.style.setProperty("--selection-background", colorStatus);
+    document.documentElement.style.setProperty("--selection-background", 'transparent');
 }
 status3.onclick=function(){
     box.style.border=" 1px dashed "+colorStatus;
     box.style.background="white";
+    circle.style.display="inline-block";
+    circle.style.color=colorStatus;
+    cube.style.display="none";
+    cube.style.color=colorStatus;
+    adjust.style.display="none";
     status1.className="col-3 option";
     status2.className="col-3 option";
     status3.className="col-3 option active";
+    status4.className="col-3 option ";
     statusValue=status3;
-    document.documentElement.style.setProperty("--selection-background", colorStatus);
+    document.documentElement.style.setProperty("--selection-background", 'transparent');
+}
+status4.onclick=function(){
+    box.style.border=" 1px solid "+colorStatus;
+    box.style.background="white";
+    adjust.style.display="inline-block";
+    adjust.style.color=colorStatus;
+    circle.style.display="none";
+    circle.style.color=colorStatus;
+    cube.style.display="none";
+    circle.style.display="none";
+    status1.className="col-3 option";
+    status2.className="col-3 option ";
+    status3.className="col-3 option ";
+    status4.className="col-3 option active";
+    statusValue=status2;
+    document.documentElement.style.setProperty("--selection-background", 'transparent');
 }
 
 //space

@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    <link href="//db.onlinewebfonts.com/c/81340d0b37605175a131017ba77a6538?family=SF+UI++Text+Med" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="/newDesign.css">
 </head>
 <style>
@@ -31,7 +32,8 @@
                         <label></label><br>
                         <div class="row">
                             <button class="col-3 option active" id="status1" > <i class="fa fa-check " id="tick"></i>Account</button>
-                            <button class="col-3 option" id="status2" ><i class="fa fa-check " id="tick"></i>Buying Center OR Offering</button>
+                            <button class="col-3 option " id="status2" ><i class="fa fa-check " id="tick"></i>Buying Center</button>
+                            <button class="col-3 option " id="status4" ><i class="fa fa-check " id="tick"></i>Offering</button>
                             <button class="col-3 option" id="status3" ><i class="fa fa-check" id="tick"></i>Cell </button>
                         </div>
                         <br>
@@ -47,14 +49,14 @@
                         <div class="col-6">
                     <label>Competitor</label><br>
                     
-                    <input type="radio" style="width: fit-content;" name="star" id="starYes" value="yes">
+                    <input type="radio" style="width: fit-content;" name="star" id="starYes" value="yes" checked>
                     <label for="starYes">Yes</label>
                     <input type="radio" style="width: fit-content; margin-left: 10%;" name="star" id="star" value="no">
                     <label for="star">No</label><br>
                 </div>
                 <div class="col-6">
                     <label>Strategy</label><br>
-                    <input type="radio" style="width: fit-content;" name="bulb" id="bulbYes" value="yes">
+                    <input type="radio" style="width: fit-content;" name="bulb" id="bulbYes" value="yes" checked>
                     <label for="bulbYes">Yes</label>
                     <input type="radio" style="width: fit-content; margin-left: 10%;" name="bulb" id="bulb" value="no">
                     <label for="bulb">No</label><br>
@@ -84,7 +86,7 @@
                     <input style="width: 43%;" type="text" id="task" placeholder="Enter Task"><br>
                 
                     <label>Space</label><br>
-                    <input type="radio" style="width: fit-content;" name="space" id="space1" value="yes">
+                    <input type="radio" style="width: fit-content;" name="space" id="space1" value="yes" checked>
                     <label for="space1">WHITESPACE</label>
                     <input type="radio" style="width: fit-content; margin-left: 10%;" name="space" id="space2"
                         value="no">
@@ -184,6 +186,9 @@
                 <div id="box" class="container secondTemplate">
                     <div class="row">
                         <div class="col-10 element">
+                            <i class="fa fa-circle cube" id="circle" ></i>
+                            <i class="fa fa-cube cube" id="cube" ></i>
+                            <i class="fa fa-adjust cube" id="adjust" ></i>
                             <label id="spaceTitle" class="secondTitle">WHITESPACE</label>
                         </div>
                         <div class="col-2 element imgContainer">
@@ -226,7 +231,7 @@
                                 </div>
                             </div>
                         
-                        <div class="col-2 element imgContainer">
+                        <div class="col-2 element imgContainer" style="border-bottom: none;">
                             <img class="secondImg" id="taskImg"  src="images/task/landscape@3x.png">
                         </div>
                     </div>
