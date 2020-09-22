@@ -1,5 +1,5 @@
 .img{
-    width: 13.5px;
+   /* width: 13.5px;*/
     height: 15px;
     object-fit: contain;
 }
@@ -98,7 +98,7 @@ h3{
 #box {
     position: relative;
 }
-
+/*
 #box::before,
 #box::after {
     content: '';
@@ -119,6 +119,7 @@ h3{
    
 
 }
+*/
 input{
     padding: 1%;
     margin-bottom: 2%;
@@ -264,6 +265,9 @@ select{
     zoom: 2;
     margin-top: 15%;
     margin-left: 28%;
+    zoom: 3;
+    margin-left: 14%;
+
 }
 .element{
     padding:0;
@@ -373,5 +377,36 @@ select{
     text-align: start;
     margin-left: -19px;
     font-size: 13px;
+    display:none;
+}
+.col-1{
+    padding:0;
+    margin:0;
+
+}
+.margin{
+    margin-top: 6px;
+}
+.bullNew{
+    width: 28px;
+    margin-top: 6px;
+    opacity: 1;
+}
+#targetValue1{
+    font-size: 16px;
+    opacity: 1;
+    color: black;
+}
+.spaceAdjust{
+    text-align: center;
+    margin-top: -5;
+    
+}
+.acheived{
+    text-align: start;
+    margin-left: 5;
+    font-size: 8px;
+}
+#box2{
     display:none;
 }

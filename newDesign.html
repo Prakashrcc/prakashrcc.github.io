@@ -22,6 +22,7 @@
 }
 </style>
 <body>
+    
     <div class="container">
         <div class="row">
             <div class="col-6">
@@ -30,19 +31,19 @@
                     <div class="form-container">
                         
                         <label></label><br>
-                        <div class="row">
-                            <button class="col-3 option active" id="status1" > <i class="fa fa-check " id="tick"></i>Account</button>
+                        <div class="row"> 
+                            <button class="col-3 option active" id="status1" > <i class="fa fa-check  " id="tick"></i>Account</button>
                             <button class="col-3 option " id="status2" ><i class="fa fa-check " id="tick"></i>Buying Center</button>
                             <button class="col-3 option " id="status4" ><i class="fa fa-check " id="tick"></i>Offering</button>
                             <button class="col-3 option" id="status3" ><i class="fa fa-check" id="tick"></i>Cell </button>
                         </div>
                         <br>
-                    <label>Status</label><br>
+                    <label>Status </label><br>
                     <div class="row" style="width: 80%;
                     margin-left: 2;">
-                        <button class="col-3 btn-group red" onclick="colorSelector('red')"> <i class="fa fa-check " id="red-tick"></i>Red</button>
+                        <button class="col-3 btn-group red" onclick="colorSelector('#FF0000')"> <i class="fa fa-check " id="#FF0000-tick"></i>Red</button>
                         <button class="col-3 btn-group amber" onclick="colorSelector('#FFBF00')"><i class="fa fa-check " id="#FFBF00-tick"></i>Amber</button>
-                        <button class="col-3 btn-group green" onclick="colorSelector('green')"><i class="fa fa-check" id="green-tick"></i>Green</button>
+                        <button class="col-3 btn-group green" onclick="colorSelector('#008000')"><i class="fa fa-check" id="#008000-tick"></i>Green</button>
                     </div>
                     
                     <div class="row" style="margin-top: 3%;">
@@ -98,63 +99,62 @@
 
             </div>
             </div>
-
+        
             <div class="col-6 card" >
                 <div class="row card-selector">
                     <label for="cars">Choose a Template:</label>
                     <select name="template" id="template">
-                      <option value="template1">Template 1</option>
+                      <option value="template1">Template 1 </option>
                       <option value="template2">Template 2</option>
-                      <option value="template3">Template 3</option>
-                      <option value="template4">Template 4</option>
+                      
                     </select>
                 </div>
-                <!-- 
-                <div class="row card-container" id="box" style="margin-top: 15%; margin-left: 20%; display:none;">
+                <label id="comment1Start"><!--</label>
+                <div class="row card-container box" id="box1" style="margin-top: 15%; margin-left: 20%; ">
                     <div class="col-12">
                         <div class="row ">
                             <div class="col-1">
-                                <img id="competitorImg" class="img" src="/images/star/Group 231@3x.png">
+                                <img id="competitorImg1" class="img competitorImg" src="/images/star/landscape@3x.png">
                             </div>
                             <div class="col-8">
-                                <h2 id="spaceTitle">WHITESPACE</h2>
+                                <h2 id="spaceTitle1">WHITESPACE</h2>
                             </div>
                             <div class="col-1">
-                                <img id="strategyImg" class="img" src="images/bulb/Group 236@3x.png">
+                                <img id="strategyImg1" class="img" src="images/bulb/landscape@3x.png">
                             </div>
                         </div>
                         <div class="row space1">
                             <div class="col-7">
                                 <div class="row">
-                                    <h3 id="pipelineValue">PIPELINE | $800k</h3>
+                                    <h3 id="pipelineValue1">PIPELINE | $800k</h3>
                                 </div>
-                                <div id="pipelineBar" class="row pipeline">
+                                <div id="pipelineBar1" class="row pipeline">
 
                                 </div>
                             </div>
                             <div class="col-5" style="text-align: center;">
-                                <img id="bullEye" class="bull" src="images/bull-eye/Group 222@3x.png">
+                                <img id="bullEye1" class="bull" src="images/bull-eye/Group 235@3x.png">
                             </div>
                         </div>
                         <div class="row space1">
                             <div class="col-7">
                                 <div class="row">
-                                    <h3 id="winsValue">WINS | $600k</h3>
+                                    <h3 id="winsValue1">WINS | $600k</h3>
                                 </div>
-                                <div id="winsBar" class="row wins">
+                                <div id="winsBar1" class="row wins">
 
                                 </div>
                             </div>
                             <div class="col-5">
-                                <h2 id="targetValue">$400K</h2>
+                                <h2 id="targetValue1">$400K</h2>
                             </div>
                         </div>
                         <div class="row space1">
                             <div class="col-7">
                                 <div class="row">
-                                    <h3 id="lossesValue">LOSSES | $200k</h3>
+                                    <h3 id="lossesValue1">LOSSES | $200k</h3>
                                 </div>
-                                <div id="lossesBar" class="row losses1">
+                                <div id="lossesBar1" class="row losses1">
 
                                 </div>
                             </div>
@@ -162,17 +162,17 @@
 
                                 <div class="row last" style="width: 100%; margin: 0;">
                                     <div class="col-3 last">
-                                        <img id="percentageImg" class="img" src="images/indicator/Group@3x.png">
+                                        <img id="percentageImg1" class="img" src="images/indicator/Group@3x.png">
                                     </div>
                                     <div class="col-3 last">
-                                        <h3 id="percentage">150%</h3>
+                                        <h3 id="percentage1">150%</h3>
                                     </div>
                                     <div class="col-3 last">
-                                        <img id="taskImg" style="text-align: end;" class="img"
-                                            src="images/task/Group 230@3x.png" alt="">
+                                        <img id="taskImg1" style="text-align: end;" class="img"
+                                            src="images/task/landscape@3x.png" alt="">
                                     </div>
                                     <div class="col-3 padd last">
-                                        <h3 style="margin-left: -5;" id="taskValue">05</h3>
+                                        <h3 style="margin-left: -5;" id="taskValue1">05</h3>
                                     </div>
                                 </div>
                             </div>
@@ -181,14 +181,116 @@
                         </div>
                     </div>
                 </div>
-            -->
+                <label id="comment1End">--></label>
+                
+                <div class="row card-container box" id="box1" style="margin-top: 15%; margin-left: 20%; ">
+                    <div class="col-12">
+                        <div class="row " style="width: 130%;">
+                            <div class="col-1" style="margin-left: 2%;">
+                                <img id="competitorImg1" class="img competitorImg" src="/images/star/landscape@3x.png">
+                            </div>
+                            <div class="col-8">
+                                <h2 id="spaceTitle1">WHITESPACE</h2>
+                            </div>
+                            <div class="col-1" style=" margin-left: -3%;">
+                                <img id="taskImg1" class="img" src="images/task/landscape@3x.png">
+                            </div>
+                            <div class="col-1">
+                                <img id="strategyImg1" class="img" src="images/bulb/landscape@3x.png">
+                            </div>
+                        </div>
+                        <div class="row space1">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-7" id="bowl">
+                                        <div class="row">
+                                            <div class="col-12 margin">
+                                                <div class="row">
+                                                    <h3 id="pipelineValue1">PIPELINE | $800k</h3>
+                                                </div>
+                                                <div id="pipelineBar1" class="row pipeline">
+                
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 margin">
+                                                <div class="row">
+                                                    <h3 id="winsValue1">WINS | $600k</h3>
+                                                </div>
+                                                <div id="winsBar1" class="row wins">
+                
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 margin">
+                                                <div class="row">
+                                                    <h3 id="lossesValue1">LOSSES | $200k</h3>
+                                                </div>
+                                                <div id="lossesBar1" class="row losses1">
+                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="row" style="text-align: center;">
+                                            <div class="col-12">
+                                                <img id="bullEye1" class="bull bullNew" src="images/bull-eye/Group 235@3x.png">
+                                            </div>
+                                        </div>
+                                        <div class="row" style="text-align: center;">
+                                            <div class="col-12">
+                                                <h2 id="targetValue1">$400K</h2>
+                                            </div>
+                                        </div>
+                                        <div class="row spaceAdjust" style="text-align: center;">
+                                            
+                                                <h3 id="percentage1">150% ACHEIVED</h3>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                       <!-- <div class="row space1">
+                           
+                            <div class="col-5 last">
+
+                                <div class="row last" style="width: 100%; margin: 0;">
+                                    <div class="col-3 last">
+                                        <img id="percentageImg1" class="img" src="images/indicator/Group@3x.png">
+                                    </div>
+                                    <div class="col-3 last">
+                                        <h3 id="percentage1">150%</h3>
+                                    </div>
+                                    <div class="col-3 last">
+                                        <img id="taskImg1" style="text-align: end;" class="img"
+                                            src="images/task/landscape@3x.png" alt="">
+                                    </div>
+                                    <div class="col-3 padd last">
+                                        <h3 style="margin-left: -5;" id="taskValue1">05</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div> -->
+                    </div>
+                </div>
+
                 <!-- 2nd Template -->
-                <div id="box" class="container secondTemplate">
+                <label id="comment2Start"></label>
+                <div id="box2" class="container secondTemplate">
                     <div class="row">
                         <div class="col-10 element">
                             <i class="fa fa-circle cube" id="circle" ></i>
-                            <i class="fa fa-cube cube" id="cube" ></i>
-                            <i class="fa fa-adjust cube" id="adjust" ></i>
+                            <i class="fa fa-caret-up cube" style="font-size: larger;" id="cube" ></i>
+                            <i class="fa fa-square cube" id="adjust" ></i>
                             <label id="spaceTitle" class="secondTitle">WHITESPACE</label>
                         </div>
                         <div class="col-2 element imgContainer">
@@ -215,7 +317,7 @@
                     </div>
                     <div class="row">
                             <div class="col-10 element" style="padding-top: 7;">
-                                <div class="row" style="margin: 0;">
+                                <div class="row" id="allContainer" style="margin: 0;">
                                     <div id="pipelineContainer" class="col-4 element secondLiner">
                                         <label class="pipelineTitle">PIPELINE</label><br>
                                         <label id="pipelineValue" class="pipelineAmount">$800k</label>
@@ -236,6 +338,7 @@
                         </div>
                     </div>
                 </div>
+            <label id="comment2End"></label>
             </div>
         </div>
     </div>
@@ -249,7 +352,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <script src="newDesign.js"></script>
+       
+        <script src="newDesign.js"></script>
+    
+    
+   
 </body>
 
 </html>
