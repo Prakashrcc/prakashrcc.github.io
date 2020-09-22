@@ -170,6 +170,7 @@ inputWins.onkeyup= function(){
     else{
         
             winsBar1.style.opacity='125%';
+            winsValue1.style.color='black';
             winsValue1.innerHTML='WINS | $'+ intToString(inputWins.value,2);
             var percent= ( inputWins.value / inputPipeline.value ) * 100;
             winsBar1.style.width=percent+'%';
