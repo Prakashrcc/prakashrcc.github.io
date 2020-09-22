@@ -1,6 +1,6 @@
 .img{
-   /* width: 13.5px;*/
-    height: 15px;
+    width: 16px;
+    height: 16px;
     object-fit: contain;
 }
 h2{
@@ -41,10 +41,10 @@ h3{
     height: 4px;
     object-fit: contain;
     border-radius: 1px;
-    background-color: #57719d;
+    background-color: #26547c;
 }
 .wins{
-    background: green;
+    background: #ff5757;
     height: 7px;
     border-radius: 10px;
     margin-left: -2%;
@@ -53,10 +53,10 @@ h3{
     height: 4px;
     object-fit: contain;
     border-radius: 1px;
-    background-color: #438566;
+    background-color: #00bd77;
 }
 .losses1{
-    background: red;
+    background: #ff5757;
     height: 7px;
     border-radius: 10px;
     margin-left: -2%;
@@ -73,12 +73,12 @@ h3{
     border-radius: 10px;
     border: 1px solid green;
     width: 200px;
-    height: 100px;
+    height: 105px;
     border-radius: 4px;
     
    background:#d8ffe3;
     padding-top: .5%;
-    border-top-left-radius: 0;
+    
 }
 .last{
     padding:0;
@@ -265,8 +265,8 @@ select{
     zoom: 2;
     margin-top: 15%;
     margin-left: 28%;
-    zoom: 3;
-    margin-left: 14%;
+    zoom: 2.5;
+    margin-left: 16%;
 
 }
 .element{

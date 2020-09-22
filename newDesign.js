@@ -105,12 +105,12 @@ inputPipeline.onkeyup= function(){
     
     if(inputPipeline.value == '0' || inputPipeline.value < '1'){
         
-        if(template == "template1"){
+        
             pipelineValue1.innerHTML='&#8213';
             pipelineValue1.style.color='#a0a2a4';
             pipelineBar1.style.opacity='10%';
             pipelineValue1.style.opacity='90%';
-        }
+        
         
             //pipelineValue.innerHTML='NO PIPELINE';
         removeAll();
@@ -124,11 +124,11 @@ inputPipeline.onkeyup= function(){
     }
     else{
         
-        if(template=="template1"){
+        
             pipelineBar1.style.opacity='125%';
             pipelineValue1.style.color='black';
             pipelineValue1.innerHTML='PIPELINE | $'+ intToString( inputPipeline.value, 2);
-        }
+        
         
             removeAll();
             //pipelineBar.style.opacity='125%';
@@ -145,14 +145,14 @@ inputPipeline.onkeyup= function(){
 inputWins.onkeyup= function(){
     
     if( inputWins.value < 1){
-        if(template=="template1"){
+        
             winsValue1.innerHTML='&#8213';
             winsValue1.style.color='#a0a2a4';
             winsBar1.style.opacity='25%';
             winsBar1.style.width='100%';
             percentage1.style.opacity='0';
-            percentageImg1.style.opacity='10%';
-        }
+            //percentageImg1.style.opacity='10%';
+        
         
             removeAll();
             //  winsValue.innerHTML='NO WINS';
@@ -163,18 +163,18 @@ inputWins.onkeyup= function(){
             //winsBar.style.opacity='25%';
             //winsBar.style.width='100%';
             percentage.style.opacity='0';
-            percentageImg.style.opacity='25%';
+            //percentageImg.style.opacity='25%';
         
        
     }
     else{
-        if(template=="template1"){
+        
             winsBar1.style.opacity='125%';
             winsValue1.innerHTML='WINS | $'+ intToString(inputWins.value,2);
             var percent= ( inputWins.value / inputPipeline.value ) * 100;
             winsBar1.style.width=percent+'%';
             winsBar1.style.maxWidth='100%';
-        }
+        
         
             removeAll();
         //winsBar.style.opacity='125%';
@@ -191,11 +191,12 @@ inputWins.onkeyup= function(){
         if(inputTarget.value >0){
         percentage.style.opacity='100%';
         percentage.innerHTML= ((inputWins.value / inputTarget.value) * 100)+"%";
-        percentageImg.style.opacity='100%';
+        percentage1.innerHTML= ((inputWins.value / inputTarget.value) * 100)+"% ACHEIVED";
+        //percentageImg.style.opacity='100%';
         }
         else{
             percentage.style.opacity='0';
-        percentageImg.style.opacity='10%';
+        //percentageImg.style.opacity='10%';
         }
     }
 }
@@ -204,12 +205,12 @@ inputWins.onkeyup= function(){
 inputLosses.onkeyup= function(){
     
     if( inputLosses.value < 1){
-        if(template=="template1"){
+        
             lossesValue1.innerHTML='&#8213';
             lossesValue1.style.color='#a0a2a4';
             lossesBar1.style.opacity='25%';
             lossesBar1.style.width='100%';
-        }
+        
         removeAll();
        // lossesValue.innerHTML='NO LOSSES';
        lossesValue.innerHTML='&#8213';
@@ -219,14 +220,14 @@ inputLosses.onkeyup= function(){
         
     }
     else{
-        if(template=="template1"){
+        
             lossesBar1.style.opacity='125%';
             lossesValue1.innerHTML='LOSSES | $'+ intToString(inputLosses.value,2);
             lossesValue1.style.color='black';
             var percent= ( inputLosses.value / inputPipeline.value ) * 100;
             lossesBar1.style.width=percent+'%';
             lossesBar1.style.maxWidth='100%';
-        }
+        
         removeAll();
         //lossesBar.style.opacity='125%';
         //lossesValue.innerHTML='LOSSES | $'+ intToString(inputLosses.value,2);
@@ -243,32 +244,32 @@ inputLosses.onkeyup= function(){
 inputTarget.onkeyup=function(){
     
     if(inputTarget.value < 1){
-        if(template=="template1"){
+        
             targetValue1.style.opacity='0%';
             targetValue1.innerHTML="&#8213";
             targetValue1.style.color='#a0a2a4';
         
             bullEye1.style.opacity='0%';
             percentage1.style.opacity='0';
-            percentageImg1.style.opacity='10%';
-        }
+           // percentageImg1.style.opacity='10%';
+        
         targetValue.style.opacity='0%';
         targetValue.innerHTML="&#8213";
         targetValue.style.color='#a0a2a4';
         
         bullEye.style.opacity='0%';
         percentage.style.opacity='0';
-        percentageImg.style.opacity='10%';
+        //percentageImg.style.opacity='10%';
     }
     else{
-        if(template=="template1"){
+        
             targetValue1.style.opacity='100%';
             targetValue1.style.color='black';
             bullEye1.style.opacity='100%';
             targetValue1.innerHTML='$'+ intToString(inputTarget.value,2); 
 
             percentage1.style.opacity='100%';
-        }
+        
         targetValue.style.opacity='100%';
         targetValue.style.color='black';
         bullEye.style.opacity='100%';
@@ -277,7 +278,7 @@ inputTarget.onkeyup=function(){
         percentage.style.opacity='100%';
         if(inputWins.value >0){
         percentage.innerHTML= ((inputWins.value / inputTarget.value) * 100).toFixed(2)+"%";
-        percentage1.innerHTML= ((inputWins.value / inputTarget.value) * 100).toFixed(2)+"%";
+        percentage1.innerHTML= ((inputWins.value / inputTarget.value) * 100).toFixed(2)+"% ACHEIVED";
         percentageImg.style.opacity='100%';
         percentageImg1.style.opacity="100%";
         }
@@ -295,19 +296,19 @@ inputTarget.onkeyup=function(){
 inputTask.onkeyup=function(){
     
     if(inputTask.value < 1){
-        if(template=="template1"){
+       
             //taskValue1.style.opacity="0%";
             taskImg1.style.opacity='10%';
-        }
+        
         //taskValue.style.opacity='0%';
         taskImg.style.opacity='10%';
     }
     else{
-        if(template=="template1"){
+        
             taskImg1.style.opacity='100%';
         //taskValue1.innerHTML= intToString(inputTask.value,2); 
         
-        }
+        
        // taskValue.style.opacity='100%';
         taskImg.style.opacity='100%';
        // taskValue.innerHTML= intToString(inputTask.value,2); 
