@@ -316,7 +316,7 @@ select{
     line-height: normal;
     letter-spacing: normal;
     color: #000000;
-    margin-top: 5;
+    margin-top: 3;
 }
 .secondBull{
     width: 24px;
@@ -334,7 +334,7 @@ select{
   line-height: normal;
   letter-spacing: normal;
   color: #000000;
-    margin-top: 12;
+    margin-top: 10;
     display: grid;
 }
 .p{
