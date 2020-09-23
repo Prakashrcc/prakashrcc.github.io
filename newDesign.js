@@ -175,7 +175,7 @@ inputWins.onkeyup= function(){
             var percent= ( inputWins.value / inputPipeline.value ) * 100;
             winsBar1.style.width=percent+'%';
             winsBar1.style.maxWidth='100%';
-            percentage1.style.opacity='100';
+            
         
         
             removeAll();
@@ -192,12 +192,14 @@ inputWins.onkeyup= function(){
 
         if(inputTarget.value >0){
         percentage.style.opacity='100%';
+        percentage1.style.opacity='100';
         percentage.innerHTML= ((inputWins.value / inputTarget.value) * 100)+"%";
         percentage1.innerHTML= ((inputWins.value / inputTarget.value) * 100)+"% ACHEIVED";
         //percentageImg.style.opacity='100%';
         }
         else{
             percentage.style.opacity='0';
+            percentage1.style.opacity='0';
         //percentageImg.style.opacity='10%';
         }
     }
@@ -270,7 +272,7 @@ inputTarget.onkeyup=function(){
             bullEye1.style.opacity='100%';
             targetValue1.innerHTML='$'+ intToString(inputTarget.value,2); 
 
-            percentage1.style.opacity='100%';
+            
         
         targetValue.style.opacity='100%';
         targetValue.style.color='black';
@@ -279,6 +281,7 @@ inputTarget.onkeyup=function(){
 
         percentage.style.opacity='100%';
         if(inputWins.value >0){
+            percentage1.style.opacity='100%';
         percentage.innerHTML= ((inputWins.value / inputTarget.value) * 100).toFixed(2)+"%";
         percentage1.innerHTML= ((inputWins.value / inputTarget.value) * 100).toFixed(2)+"% ACHEIVED";
         percentageImg.style.opacity='100%';
@@ -286,8 +289,9 @@ inputTarget.onkeyup=function(){
         }
         else{
             percentage.style.opacity='0';
-            percentageImg.style.opacity='10%';  
             percentage1.style.opacity='0';
+            percentageImg.style.opacity='10%';  
+            
             percentageImg1.style.opacity='10%'; 
         }
 
